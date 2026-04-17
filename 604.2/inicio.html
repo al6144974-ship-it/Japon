@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="iniciostyle.css">
+</head>
+<body>
+    <header>
+        <div class="logo"> <img src="akatsuki.png" alt="logo">           </div>
+            <nav class="menu">
+
+                                <a href="servicios.html">servicios</a>
+                <a href="contactanos.html">contacto</a>
+                <a href="index.html">regresar</a>
+        </nav>
+    </header>
+    <div class="carousel">
+        <input type="radio" name="carousel" id="slide1" checked>
+        <input type="radio" name="carousel" id="slide2">
+        <input type="radio" name="carousel" id="slide3">
+        <input type="radio" name="carousel" id="slide4">
+        <input type="radio" name="carousel" id="slide5">
+        <div class="carousel-inner">
+            <div class="slide" for="slide1"><img src="imga1.webp" alt="Image 1"></div>
+            <div class="slide" for="slide2"><img src="imga2.avif" alt="Image 2"></div>
+            <div class="slide" for="slide3"><img src="imga3.jpg" alt="Image 3"></div>
+            <div class="slide" for="slide4"><img src="imga4.jpg" alt="Image 4"></div>
+            <div class="slide" for="slide5"><img src="imga5.jpg" alt="Image 5"></div>
+        </div>
+        <div class="indicators">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+        setInterval(() => {
+            currentSlide = currentSlide % totalSlides + 1;
+            document.getElementById('slide' + currentSlide).checked = true;
+        }, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
